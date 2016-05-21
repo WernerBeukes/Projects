@@ -1,0 +1,8 @@
+{
+  "name": "comparator",
+  "version": "1.0.0",
+  "description": "Comparator project",
+  "main": "index.html",
+  "author": "Werner Beukes",
+  "license": "ISC"
+}

@@ -1,0 +1,25 @@
+@import 'variables';
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #222222;
+}
+
+.container-fluid {
+  padding: 0px;
+  margin: 0px;
+}
+
+.clear {
+  width: 100%;
+  margin: $margin-default;
+}
+
+@media(max-width: 545px) {
+  @import 'mobile/_mobile';
+}
+
+@media(min-width: 546px) {
+  @import 'normal/_normal';
+}

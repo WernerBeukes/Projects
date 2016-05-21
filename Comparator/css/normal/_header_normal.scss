@@ -1,0 +1,22 @@
+@import '../_variables';
+
+header {
+  height: 126px;
+  border-bottom: $header-border-bottom;
+
+  .img-responsive {
+    margin: $margin-default;
+    display: inline;
+    float: left;
+  }
+
+  .search-input {
+    margin:63px 10px 10px 10px;
+    float: right;
+
+    .input-lg {
+      width: 250px;
+      border-radius: 0px;
+    }
+  }
+}
