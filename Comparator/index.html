@@ -4,11 +4,30 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+
+    <script type="text/javascript" src="js/styling/style_fixes.js"></script>
+    <script type="text/javascript" src="js/styling/carousal_control.js"></script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script type="text/javascript" src="js/types/ItemType.js"></script>
+    <script type="text/javascript" src="js/services/ObjectFactory.js"></script>
+
+    <script type="text/javascript" src="js/services/DummyItemService.js"></script>
+    <script type="text/javascript" src="js/services/ServicesManager.js"></script>
+
+    <script type="text/javascript" src="js/directives/ItemPane.js"></script>
+
+    <script type="text/javascript" src="js/controllers/root.js"></script>
+
     <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="css/base.css" />
 </head>
 <body>
-    <main>
+    <main class="container" ng-app="Comparator" ng-controller="RootController">
         <header>
             <img src="http://placehold.it/250x100&text=Logo" alt="" class="img-responsive">
             <form class="search-input">
@@ -16,27 +35,9 @@
             </form>
         </header>
         <article>
-            <div class="row">
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                    <div class="thumbnail">
-                        <img src="http://placehold.it/320x150" alt="">
-                        <div class="caption">
-                            <h4 class="pull-right">$94.99</h4>
-                            <h4><a href="#">Fifth Product</a>
-                            </h4>
-                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="ratings">
-                            <p class="pull-right">18 reviews</p>
-                            <p>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star"></span>
-                                <span class="glyphicon glyphicon-star-empty"></span>
-                            </p>
-                        </div>
-                    </div>
+            <div class="ItemsDisplay">
+                <div class="row">
+                    <item-pane item="item" ng-repeat="item in items"></item-pane>
                 </div>
             </div>
         </article>

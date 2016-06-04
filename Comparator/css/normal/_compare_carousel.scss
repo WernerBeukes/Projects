@@ -1,0 +1,23 @@
+.CompareList {
+  margin: 10px;
+
+  .carousel-inner {
+    .active.left {
+      left: -33%;
+    }
+    .next {
+      left: 33%;
+    }
+    .prev {
+      left: -33%;
+    }
+  }
+  .carousel-control {
+    .left {
+      background-image: none;
+    }
+    .right {
+      background-image: none;
+    }
+  }
+}
