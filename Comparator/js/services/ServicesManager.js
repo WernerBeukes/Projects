@@ -1,4 +1,4 @@
-angular.module('Comparator').service('ServicesManager', ['DummyItemService', function (DummyItemService) {
+angular.module('Comparator.Services').service('ServicesManager', ['DummyItemService', function (DummyItemService) {
     var services = [DummyItemService];
     return {
         'loadAllItems' : function () {

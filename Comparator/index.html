@@ -11,23 +11,33 @@
     <script type="text/javascript" src="js/styling/style_fixes.js"></script>
     <script type="text/javascript" src="js/styling/carousal_control.js"></script>
 
+    <!-- Main Angular App -->
     <script type="text/javascript" src="js/main.js"></script>
 
+    <!-- Item types -->
     <script type="text/javascript" src="js/types/ItemType.js"></script>
     <script type="text/javascript" src="js/services/ObjectFactory.js"></script>
 
+    <!-- Services -->
     <script type="text/javascript" src="js/services/DummyItemService.js"></script>
     <script type="text/javascript" src="js/services/ServicesManager.js"></script>
 
+    <!-- Directives -->
     <script type="text/javascript" src="js/directives/ItemPane.js"></script>
 
+    <!-- Filters -->
+
+
+    <!-- Controllers -->
     <script type="text/javascript" src="js/controllers/root.js"></script>
 
+
+    <!-- Style Sheets -->
     <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="css/base.css" />
 </head>
 <body>
-    <main class="container" ng-app="Comparator" ng-controller="RootController">
+    <main class="container-fluid" ng-app="Comparator" ng-controller="RootController">
         <header>
             <img src="http://placehold.it/250x100&text=Logo" alt="" class="img-responsive">
             <form class="search-input">
@@ -37,7 +47,7 @@
         <article>
             <div class="ItemsDisplay">
                 <div class="row">
-                    <item-pane item="item" ng-repeat="item in items"></item-pane>
+                    <item-pane item="item" ng-repeat="item in items" add-to-compare="addToQueue"></item-pane>
                 </div>
             </div>
         </article>

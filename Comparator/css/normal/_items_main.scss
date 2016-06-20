@@ -2,43 +2,6 @@ article {
   .ItemsDisplay {
     .row {
       padding: 25px;
-
-      .product-space {
-        width: 220px;
-        display: inline-block;
-        margin: 5px;
-
-        .thumbnail {
-          padding: 0px;
-          border-radius: 0px;
-
-          .product-name {
-            overflow: hidden;
-            padding: 0px 10px;
-          }
-
-          .ratings {
-            padding: 0px 10px;
-            color: #d17581;
-
-            .review-count {
-              margin: 3px 0px 3px 0px;
-            }
-
-            h4 {
-              white-space: nowrap;
-              color: #000000;
-              margin: -3px 3px 5px 3px;
-            }
-          }
-
-          img {
-            width: 200px;
-            height: 150px;
-            margin: 10px auto;
-          }
-        }
-      }
     }
   }
 }
