@@ -64,29 +64,31 @@ html, body {
     width: 220px;
     display: inline-block;
     margin: 5px; }
+    .product-space :hover {
+      cursor: pointer; }
     .product-space .thumbnail {
       padding: 0px;
       border-radius: 0px;
       overflow-y: hidden; }
-      .product-space .thumbnail .product-name {
+      .product-space .thumbnail #itemPaneInfo .product-name {
         overflow: hidden;
         padding: 0px 10px; }
-      .product-space .thumbnail .ratings {
+      .product-space .thumbnail #itemPaneInfo .ratings {
         padding: 0px 10px;
         color: #d17581; }
-        .product-space .thumbnail .ratings .review-count {
+        .product-space .thumbnail #itemPaneInfo .ratings .review-count {
           margin: 3px 0px 3px 0px; }
-        .product-space .thumbnail .ratings h4 {
+        .product-space .thumbnail #itemPaneInfo .ratings h4 {
           white-space: nowrap;
           color: #000000;
           margin: -3px 3px 5px 3px; }
+      .product-space .thumbnail #itemPaneInfo img {
+        width: 200px;
+        height: 150px;
+        margin: 10px 9px; }
       .product-space .thumbnail .links {
         padding: 0px 10px; }
         .product-space .thumbnail .links .btn-primary {
-          width: 100%; }
-      .product-space .thumbnail img {
-        width: 200px;
-        height: 150px;
-        margin: 10px auto; } }
+          width: 100%; } }
 
 /*# sourceMappingURL=base.css.map */

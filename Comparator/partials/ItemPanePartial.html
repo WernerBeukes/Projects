@@ -1,23 +1,26 @@
 <div class="product-space">
     <div class="thumbnail">
-        <img src="http://placehold.it/200x150" alt="">
-        <div class="product-name">
-            <h4>{{item.Name}}</h4>
-        </div>
-        <div class="ratings">
-            <p class="review-count">18 reviews</p>
-            <h4 class="pull-right">{{item.Price}}</h4>
-            <p>
-                <span class="glyphicon" ng-class="{'glyphicon-star': item.Rating >= 1, 'glyphicon-star-empty': item.Rating < 1}"></span>
-                <span class="glyphicon" ng-class="{'glyphicon-star': item.Rating >= 2, 'glyphicon-star-empty': item.Rating < 2}"></span>
-                <span class="glyphicon" ng-class="{'glyphicon-star': item.Rating >= 3, 'glyphicon-star-empty': item.Rating < 3}"></span>
-                <span class="glyphicon" ng-class="{'glyphicon-star': item.Rating >= 4, 'glyphicon-star-empty': item.Rating < 4}"></span>
-                <span class="glyphicon" ng-class="{'glyphicon-star': item.Rating >= 5, 'glyphicon-star-empty': item.Rating < 5}"></span>
-            </p>
+        <div id="itemPaneInfo" data-toggle="modal" data-target="#productMorInfoModal">
+            <img src="http://placehold.it/200x150" alt="">
+            <div class="product-name">
+                <h4>{{item.Name}}</h4>
+            </div>
+            <div class="ratings">
+                <p class="review-count">18 reviews</p>
+                <h4 class="pull-right">{{item.Price}}</h4>
+                <p>
+                    <span class="glyphicon" ng-class="{'glyphicon-star': item.Rating >= 1, 'glyphicon-star-empty': item.Rating < 1}"></span>
+                    <span class="glyphicon" ng-class="{'glyphicon-star': item.Rating >= 2, 'glyphicon-star-empty': item.Rating < 2}"></span>
+                    <span class="glyphicon" ng-class="{'glyphicon-star': item.Rating >= 3, 'glyphicon-star-empty': item.Rating < 3}"></span>
+                    <span class="glyphicon" ng-class="{'glyphicon-star': item.Rating >= 4, 'glyphicon-star-empty': item.Rating < 4}"></span>
+                    <span class="glyphicon" ng-class="{'glyphicon-star': item.Rating >= 5, 'glyphicon-star-empty': item.Rating < 5}"></span>
+                </p>
+            </div>
         </div>
         <div class="links">
             <a href="#" class="btn btn-primary">Buy now</a>
-            <a href="#" class="btn btn-block" ng-click="addToCompare()">Add to compare</a>
+            <a ng-if="!item.InCompareList" href="#" class="btn btn-block" ng-click="addToCompare({arg1: item})">Add to compare</a>
+            <a ng-if="item.InCompareList" href="#" class="btn btn-block" ng-click="removeFromCompare({arg1: item})">Remove from Compare</a>
         </div>
     </div>
 </div>

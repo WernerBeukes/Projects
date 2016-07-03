@@ -10,6 +10,7 @@
 
     <script type="text/javascript" src="js/styling/style_fixes.js"></script>
     <script type="text/javascript" src="js/styling/carousal_control.js"></script>
+    <script type="text/javascript" src="js/Fixes/ElementFixes.js"></script>
 
     <!-- Main Angular App -->
     <script type="text/javascript" src="js/main.js"></script>
@@ -24,6 +25,7 @@
 
     <!-- Directives -->
     <script type="text/javascript" src="js/directives/ItemPane.js"></script>
+    <script type="text/javascript" src="js/directives/MoreInfoModal.js"></script>
 
     <!-- Filters -->
 
@@ -47,8 +49,9 @@
         <article>
             <div class="ItemsDisplay">
                 <div class="row">
-                    <item-pane item="item" ng-repeat="item in items" add-to-compare="addToQueue"></item-pane>
+                    <item-pane item="item" ng-repeat="item in items" add-to-compare="listControls.addToQueue(arg1)" remove-from-compare="listControls.removeFromQueue(arg1)" />
                 </div>
+                <more-info-modal item=""></more-info-modal>
             </div>
         </article>
         <aside>

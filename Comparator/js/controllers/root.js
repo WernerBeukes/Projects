@@ -1,12 +1,14 @@
 angular.module('Comparator').controller('RootController', ['$scope', 'ServicesManager', function ($scope, ServicesManager) {
     $scope.items = ServicesManager.loadAllItems();
     $scope.compareItems = [];
+    $scope.moreInfoItem = $scope.items[0];
     
-    $scope.addToQueue = function (item) {
-        $scope.compareItems.push(item);
+    $scope.listControls = {
+        addToQueue: function (item) {
+            console.log(item.Name);
+        },
+        removeFromQueue: function (item) {
+            console.log("Remove");    
+        }
     };
-
-    $scope.removeFromQueue = function (item) {
-        $scope.compareItems.splice(, 1)
-    }
 }]);
